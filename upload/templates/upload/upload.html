@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Upload</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'upload/css/styles.css' %}">
+</head>
+<body>
+    <h1>Upload Your File</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="file" name="file" accept=".csv, .xls, .xlsx" required>
+        <button type="submit">Upload</button>
+    </form>
+</body>
+</html>

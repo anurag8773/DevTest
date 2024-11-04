@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Success</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'upload/css/styles.css' %}">
+</head>
+<body>
+    <h1>Summary Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Cust State</th>
+                <th>Cust Pin</th>
+                <th>Count</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for row in summary %}
+                <tr>
+                    <td>{{ row.Cust_State }}</td>
+                    <td>{{ row.Cust_Pin }}</td>
+                    <td>{{ row.Count }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <a href="{% url 'upload' %}">Upload another file</a>
+</body>
+</html>
