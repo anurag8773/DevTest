@@ -40,7 +40,7 @@ def send_summary_email(summary_data):
         subject='Python Assignment - Anurag',
         body=summary_text,
         from_email='anurag21xxx005@akgec.ac.in',  # Replace with your email
-        to=['singhanurag8773@gmail.com'],
+        to=['tech@themedius.ai'],
     )
     
     email.send()
